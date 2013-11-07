@@ -1,11 +1,12 @@
 {
-  "name": "Code Formatter",
-  "description": "A chrome plugin to format your HTML, CSS, JS, SQL or JSON code.",
-  "version": "0.1",
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
-  },
-  "icons": { "16": "icons/logo.png", "128": "icons/logo-128.png"}
+  "name": "Code Formatter"
+  , "description": "A chrome plugin to format your HTML, CSS, JS, SQL or JSON code."
+  , "version": "1.0"
+  , "browser_action": {
+      "default_title": "My Bookmarks"
+      , "default_icon": "icons/logo-16.png"
+      , "default_popup": "popup.html"
+  }
+  , "manifest_version": 2
+  , "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'" 
 }
