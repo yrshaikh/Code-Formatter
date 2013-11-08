@@ -8,12 +8,15 @@ input {cursor: pointer;}
 body {width: 600px; height: 500px;}
 body {background: #eee;color: #8c989e}
 header h2 {text-align: center;color: #555;font-size: 1.8em;}
+header .title-info {color: #777777;float: left;margin-bottom: 20px;margin-top: -20px;text-align: center;width: 100%;}
 header img {height: 25px;}
-.select-language-holder label {width: 100px; float: left;}
+.select-language-holder label {width: 125px;}
 textarea#source {width: 100%;height: 400px;resize: none;}
 textarea#source {font-family: Consolas, Lucida Console !important; font-size: 12px;}
 mainContent {height: 500px;}
-.select-language-holder, .code-holder, .actions-holder {padding-bottom: 10px;}
+.select-language-holder, .code-holder, .actions-holder {padding-bottom: 20px;}
+.select-language-holder {width: 100%; float: right;}
+.code-holder, .actions-holder {width: 100%; float: right;}
 .actions-holder {padding-top: 10px;}
 footer {margin-top: 30px;font-size: 12px;float: right;}
 .button{color: #fff;background: #8c989e;padding: 5px 20px;margin-right: 5px;cursor: pointer;}
