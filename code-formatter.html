@@ -1,10 +1,102 @@
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="formatter.js"></script>
+	<script src="resources/jquery.min.js"></script>
+	<script src="resources/select2/select2.js"></script>
+	<script src="formatter.js"></script>
+	<script src="resources/js-beautify-master/web/third-party/codemirror/lib/codemirror.js"></script>
+	<script src="resources/js-beautify-master/web/third-party/codemirror/mode/javascript/javascript.js"></script>
+	<script src="resources/js-beautify-master/js/lib/beautify.js"></script>
+	<script src="resources/js-beautify-master/js/lib/beautify-css.js"></script>
+	<script src="resources/js-beautify-master/js/lib/beautify-html.js"></script>
+	<script src="resources/js-beautify-master/js/test/sanitytest.js"></script>
+	<script src="resources/js-beautify-master/js/test/beautify-tests.js"></script>
+	<script src="resources/js-beautify-master/js/lib/unpackers/javascriptobfuscator_unpacker.js"></script>
+	<script src="resources/js-beautify-master/js/lib/unpackers/urlencode_unpacker.js"></script>
+	<script src="resources/js-beautify-master/js/lib/unpackers/p_a_c_k_e_r_unpacker.js"></script>
+	<script src="resources/js-beautify-master/js/lib/unpackers/myobfuscate_unpacker.js"></script>
+
+	<link href='style.css' rel='stylesheet' type='text/css'>
+	<link href='resources/select2/select2.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/3024-day.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/3024-night.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/ambiance.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/base16-dark.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/base16-light.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/blackboard.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/cobalt.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/eclipse.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/elegant.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/erlang-dark.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/lesser-dark.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/mbo.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/midnight.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/monokai.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/neat.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/night.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/paraiso-dark.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/paraiso-light.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/rubyblue.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/solarized.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/the-matrix.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/tomorrow-night-eighties.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/twilight.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/vibrant-ink.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/xq-dark.css">
+	<link rel="stylesheet" href="resources/js-beautify-master/web/third-party/codemirror/theme/xq-light.css">
 </head>
-<body style="width: 400px">
-	<div class="header">Yasser</div>
-  	<input type="button" id="formatBtn" value="Format" />
+<body>
+	<header>		
+		<h2 class="title">
+			<img src="/icons/logo.png">
+			Code Formatter (beta)
+		</h2>	
+	</header>
+	<mainContent>
+		<div class="select-language-holder">
+			<label>Select a theme : </label>
+			<select id="select-theme" style="width:200px;">
+				<option selected>default</option>
+				<option>3024-day</option>
+				<option>3024-night</option>
+				<option>ambiance</option>
+				<option>base16-dark</option>
+				<option>base16-light</option>
+				<option>blackboard</option>
+				<option>cobalt</option>
+				<option>eclipse</option>
+				<option>elegant</option>
+				<option>erlang-dark</option>
+				<option>lesser-dark</option>
+				<option>mbo</option>
+				<option>midnight</option>
+				<option>monokai</option>
+				<option>neat</option>
+				<option>night</option>
+				<option>paraiso-dark</option>
+				<option>paraiso-light</option>
+				<option>rubyblue</option>
+				<option>solarized dark</option>
+				<option>solarized light</option>
+				<option>the-matrix</option>
+				<option>tomorrow-night-eighties</option>
+				<option>twilight</option>
+				<option>vibrant-ink</option>
+				<option>xq-dark</option>
+				<option>xq-light</option>
+			</select>
+		</div>		
+		<div class="code-holder">
+			<textarea id="source"></textarea>
+		</div>
+		<div class="actions-holder">
+			<input id="formatBtn" class="button submit" value="Format" type="button" />
+			<input id="copyBtn" class="button" value="Copy" type="button" />
+			<input id="clearBtn" class="button" value="Clear" type="button" />
+		</div>
+	</mainContent>
+	<footer>
+		Code Formatter - All Rights Reserved. Copyright 2013. Made by <a href="#" class="credit">Yasser R Shaikh</a>
+	</footer>  	
 </body>
 </html>

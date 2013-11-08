@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@font-face{font-family: Proxima Sans Regular;src: url('resources/fonts/PROXIMASANSREGULAR.TTF');}
+
+html, body, input, textarea { font-family: 'Proxima Sans Regular', 'Source Sans Pro', 'Raleway', 'Segoe UI', Arial; font-size: 16px;}
+input {cursor: pointer;}
+body {width: 600px; height: 500px;}
+body {background: #eee;color: #8c989e}
+header h2 {text-align: center;color: #555;font-size: 1.8em;}
+header img {height: 25px;}
+.select-language-holder label {width: 100px; float: left;}
+textarea#source {width: 100%;height: 400px;resize: none;}
+textarea#source {font-family: Consolas, Lucida Console !important; font-size: 12px;}
+mainContent {height: 500px;}
+.select-language-holder, .code-holder, .actions-holder {padding-bottom: 10px;}
+.actions-holder {padding-top: 10px;}
+footer {margin-top: 30px;font-size: 12px;float: right;}
+.button{color: #fff;background: #8c989e;padding: 5px 20px;margin-right: 5px;cursor: pointer;}
+.button:hover{background: #6B8775;}
+
+footer .credit {color:#555;}
+footer .credit:hover {text-decoration: underline; color:blue;}
